@@ -9,7 +9,6 @@ RSpec.describe "User can create a comment" do
 
     fill_in "comment[content]", with: "*DOUBLE ROCK HAND EMOJI*"
     click_on "Create Comment"
-    save_and_open_page
     expect(current_path).to eq movie_path(movie)
     expect(page).to have_content("*DOUBLE ROCK HAND EMOJI*")
     expect(page).to have_content(user.username)
