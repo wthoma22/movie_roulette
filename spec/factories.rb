@@ -1,5 +1,6 @@
 FactoryGirl.define do
 
+
   factory :user do
     username "zuzu"
     email "zuzu@pup-tart.com"
@@ -13,7 +14,7 @@ FactoryGirl.define do
 
   factory :movie do
     title "Hellraiser"
-    rating
+    score
     genre
   end
 
@@ -21,8 +22,8 @@ FactoryGirl.define do
     name "Horror"
   end
 
-  factory :rating do
-    movie_rating 5
+  factory :score do
+    movie_score 5
   end
 
 end

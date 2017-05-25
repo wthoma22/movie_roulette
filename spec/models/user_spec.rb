@@ -10,9 +10,9 @@ RSpec.describe User do
       end
 
       it "has a unique name" do
-        user = User.create(username: "cthulhu", email:"c@gmail.com", password: "pw")
+        user = User.create(username: "cthulhu", email:"d@gmail.com", password: "wp")
         user2 = User.create(username: "cthulhu", email:"d@gmail.com", password: "wp")
-        # user2 = create(:user, username: "cthulhu")
+
         expect(user2).to be_invalid
       end
     end
