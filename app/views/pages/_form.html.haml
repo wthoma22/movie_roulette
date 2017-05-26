@@ -1,0 +1,7 @@
+= form_for @genres do |w|
+  %p
+  = w.select "Genre Select", [genre_list]
+  %p
+  = w.submit "Search"
+  %p
+  = link_to movie_path(movie)

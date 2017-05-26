@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "User can create a comment" do
-  scenario "a user can create a comment on a movie's page" do
+  xscenario "a user can create a comment on a movie's page" do
     movie = create(:movie)
     user = create(:user)
 
