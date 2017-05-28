@@ -8,16 +8,20 @@ RSpec.describe "User can visit the landing page" do
     expect(page).to have_content("Welcome")
     expect(page).to have_content("Login")
     expect(page).to have_content("Create Account")
+
   end
 
-  scenario "a user can enter search criteria to find a movie" do
-    genre = create(:genre)
+  scenario "a user can enter a movie title to find movie info" do
+    movie = create(:movie)
 
     visit root_path
-    select(genre.name, :from => "Genre Select")
-    click_on "Spin"
 
-    expect(current_path).to eq movie_path(movie)
-    expect(page).to have_content(genre.name)
+    within("form") do
+      fill_in "title", with: "movie.title"
+      click_on "Search"
+    end
+
+    expect(current_path).to eq movies_path
+    expect(page).to have_content(movie.title)
   end
 end

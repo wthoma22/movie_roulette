@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "pages#welcome"
+  root to: "movies#index"
 
   resources :users
 

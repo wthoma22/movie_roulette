@@ -1,0 +1,5 @@
+= form_tag movies_path, method: :get, class: "search-form" do
+  -# = label_tag :title
+  = text_field_tag :title, params[:title], placeholder: "Search Movies"
+
+  = submit_tag "Search", name: nil
