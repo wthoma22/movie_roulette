@@ -1,0 +1,33 @@
+label {
+  width: 4em;
+  float: left;
+  text-align: left;
+  margin-right: 4em;
+  display: block;
+}
+
+.custom-class {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px -1px #333;
+  outline: none;
+  color: #fff;
+  background-color: #57ffc8;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #333;
+}
+
+.custom-class:active {
+  background-color: #57ffc8;
+  box-shadow: 0 5px #333;
+  transform: translateY(4px);
+}
+
+p.last {
+  padding: .5px;
+}
