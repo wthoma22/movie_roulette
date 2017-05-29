@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "User visits a new user page" do
   it "they can create a new user" do
     visit new_user_path
+    
     fill_in "user[username]", with: "zuzu"
     fill_in "user[email]", with: "zuzu@pup-tart.com"
     fill_in "user[password]", with: "meatball"
