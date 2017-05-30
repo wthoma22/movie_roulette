@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    flash[:success] = "Successfully logged in!"
+    flash[:success] = 'Successfully logged in!'
     redirect_to user_path(@user)
   end
 

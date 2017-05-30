@@ -9,7 +9,7 @@ RSpec.describe "User visits a new user page" do
     fill_in "user[username]", with: "zuzu"
     fill_in "user[email]", with: "zuzu@pup-tart.com"
     fill_in "user[password]", with: "meatball"
-    click_on "Create Account"
+    click_on("Create Account", match: :first)
 
     expect(current_path).to eq(user_path(User.last.id))
     expect(page).to have_content("Successfully logged in!")
